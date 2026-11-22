@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقييم الحالة | مساعد النزيف والجروح الذكي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-cross">✚</span>
+        <span>مساعد النزيف والجروح الذكي</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="assessment.html" class="active">تقييم الحالة</a>
+        <a href="guide.html">دليل الإسعافات</a>
+        <a href="kit.html">شنطة الإسعاف</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="emergency-bar">
+    <div class="container emergency-inner">
+      <p><strong>حالة طارئة؟</strong> اتصل بالإسعاف فورًا</p>
+      <a class="btn btn-emergency" href="tel:123"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="M8.5 10v4M6.5 12h4"/></svg> 123</a>
+    </div>
+  </section>
+
+  <main class="container page-main">
+    <h1>تقييم الحالة</h1>
+    <p class="page-intro">جاوب على الأسئلة بالترتيب، وهنقولك التصرف الصحيح خطوة بخطوة.</p>
+
+    <div id="assessment-app" class="assessment-box">
+      <div id="question-area"></div>
+      <div id="result-area" class="hidden"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>مشروع 05 — كورس مهارات الإسعافات الأولية | كلية الحاسبات والمعلومات والذكاء الاصطناعي</p>
+      <p class="disclaimer">المحتوى هنا للتوعية والتعليم فقط، ومش بديل عن الرعاية الطبية المتخصصة. في الحالات الخطيرة اتصل بالإسعاف 123 فورًا.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
