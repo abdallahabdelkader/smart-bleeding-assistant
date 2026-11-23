@@ -1,0 +1,13 @@
+amount,object,limb,label
+mild,no,no,mild
+mild,no,yes,mild
+mild,yes,no,embedded
+mild,yes,yes,embedded
+nose,no,no,nose
+nose,no,yes,nose
+nose,yes,no,nose
+nose,yes,yes,nose
+severe,no,no,severe_body
+severe,no,yes,severe_limb
+severe,yes,no,embedded
+severe,yes,yes,embedded
