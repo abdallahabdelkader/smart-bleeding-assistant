@@ -22,6 +22,32 @@ first aid for bleeding and wounds, fast.
 The medical content follows the 2024 American Red Cross / American Heart Association first aid
 guidelines for bleeding control.
 
+## Trained ML model (educational prototype)
+
+The assessment now runs a **multinomial logistic regression (softmax)** model in the
+browser. Its weights are genuinely fitted by gradient descent, not handwritten.
+`model-weights.js` contains the fitted parameters and `ai-assessment.js` runs inference.
+No API, secret, paid service, backend or patient data is used. Answers are not sent to a server.
+
+**Data provenance and limits:** `synthetic-training.csv` contains 12 exhaustively
+constructed combinations of three questionnaire features. Labels are generated from
+the same existing decision rules. These are NOT patient records, expert-annotated
+clinical cases, or a representative medical dataset. The model is a toy demonstration
+of learning to imitate rules, not an independent clinical intelligence improvement.
+There is no clinical validation, clinical accuracy claim, calibrated confidence score,
+or held-out generalisation claim. A good fit to this tiny synthetic table proves
+neither diagnostic accuracy nor real-world safety.
+
+**Safety:** the original rules alone choose care instructions. Severe-bleeding answers
+always receive emergency guidance independently of any ML prediction. The model's
+educational label is shown separately and cannot downgrade or replace emergency
+advice. Missing/corrupt model files do not stop the rule-based instructions.
+Self-reported answers can miss danger: do not wait for this questionnaire in an emergency.
+
+Reproduce training with standard-library Python: `python train_model.py`.
+Run regression checks with Node.js: `node test-model.js`.
+See `MODEL_CARD.md` for feature encoding, training procedure and limitations.
+
 ## Tech
 
 Plain HTML, CSS, and JavaScript. No frameworks, no build step, no backend — open
